@@ -38,7 +38,7 @@ Théme : **Tor**, **VPN**, **Docker**
 * déploiement de la machine client 
   * OS : 
   * IP : 192.168.59.101
-  * PAQUETS : torify
+  * PAQUETS : torify, ssh
 
 * déploiement de la machine tor service 
   * OS : 
