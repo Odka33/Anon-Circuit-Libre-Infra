@@ -1,10 +1,10 @@
 # Anon-Circuit-Libre-Infra
 
-Nom de l'équipe : "github.."
+Nom de l'équipe : **github..**
 
-Membre de l'équipei : Yannick, John, Elie
+Membre de l'équipei : **Yannick**, **John**, **Elie**
 
-Théme : Tor, VPN, Docker 
+Théme : **Tor**, **VPN**, **Docker** 
 
 #### Répartition du travail :
 
