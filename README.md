@@ -1,12 +1,12 @@
 # Anon-Circuit-Libre-Infra
 
-Nom de l'équipe: "github.."
+Nom de l'équipe : "github.."
 
-Membre de l'équipe: Yannick, John, Elie
+Membre de l'équipei : Yannick, John, Elie
 
-Thème: Anonymisation d'attaque réseaux via un passage par le réseaux tor et un basculement d'IP public.
+Théme : Tor, VPN, Docker 
 
-#### Répartition du travail:
+#### Répartition du travail :
 
 **Circuit tor & hidden service** -> John Marx
 
@@ -14,12 +14,10 @@ Thème: Anonymisation d'attaque réseaux via un passage par le réseaux tor et u
 
 **Basculement d'IP** -> Elie Benayoun
 
-#### Schéma: Anonymisation - Attaque réseaux via un circuit tor et basculement VPN sur conteneur Docker
+#### Schéma: Circuit sécurisé pour attaque réseaux.
+![](https://i.imgur.com/0hEEMhP.png)
 
-![](https://i.imgur.com/iI1R7wy.png)
- 
-
-
+#### 
 
 
 
