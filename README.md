@@ -35,30 +35,32 @@ Théme : **Tor**, **VPN**, **Docker**
 ### Actions :
 
 #### Création
-- déploiement de la machine client 
-
-OS : 
-
-IP : 192.168.56.101
-
-PAQUETS : ssh, torify
+* déploiement de la machine client 
+  * OS : 
+  * IP : 192.168.59.101
+  * PAQUETS : torify
 
 * déploiement de la machine tor service 
   * OS : 
   * IP : 192.168.69.102 
-  * PAQUETS : tor, ssh
+  * PAQUETS : tor
  
-- déploiement de la machine attaquant 
+* déploiement de la machine attaquant 
+  * OS :
+  * IP : 192.168.79.103
+  * PAQUETS: docker, wireguard-client, nmap, telnet hping, sqlmap etc ..  
 
-OS :
-
-IP :
-
-PAQUETS: docker, wireguard, nmap, telnet hping, sqlmap etc ..  
-
+* déploiement de conteneur docker
+  * OS :
+  * IP :192.168.79.104,105,106
+  * PAQUETS: wireguard-server
+  
 #### Cas d'usage
-- connexion ssh au service tor.
-- connexion à ssh à la machine "attaquant".
-- connexion au vpn server.
-
+* connexion ssh au service tor.
+  * ```torify ssh user@abcdefghijklmnop.onion```
+* connexion à ssh à la machine "attaquant".
+  * ```ssh user@192.168.79.103```
+* connexion au vpn server.
+  * ```sudo wg```
+  
 ## Maintien en condition opérationnelles
