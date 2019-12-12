@@ -1,8 +1,9 @@
 # Anon-Circuit-Libre-Infra
 
+## Présentation
 Nom de l'équipe : **github..**
 
-Membre de l'équipei : **Yannick**, **John**, **Elie**
+Membre de l'équipe : **Yannick**, **John**, **Elie**
 
 Théme : **Tor**, **VPN**, **Docker** 
 
@@ -17,7 +18,7 @@ Théme : **Tor**, **VPN**, **Docker**
 ## Schéma: Circuit sécurisé pour attaque réseaux.
 ![](https://i.imgur.com/0hEEMhP.png)
 
-## 
+
 
 
 
