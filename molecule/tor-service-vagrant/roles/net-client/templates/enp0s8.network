@@ -1,0 +1,7 @@
+[Match]
+Name=enp0s8
+
+[Network]
+dhcp=yes
+LinkLocalAddressing=no
+IPv6AcceptRA=no
