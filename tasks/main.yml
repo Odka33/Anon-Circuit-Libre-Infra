@@ -1,0 +1,5 @@
+---
+# tasks file for anon-test
+- name: Hi there
+  debug:
+    msg: Hi, there! seems it's works
