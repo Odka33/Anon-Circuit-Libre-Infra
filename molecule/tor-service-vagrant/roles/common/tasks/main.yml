@@ -1,0 +1,56 @@
+- name: stop NetworkManager
+  systemd: 
+    name: NetworkManager
+    state: stopped
+    enabled: no
+  become: yes
+
+- name: Préparation de "systemd-networkd"
+  file:
+    path: /etc/systemd/network 
+    state: directory
+    mode: '0755'
+  become: yes
+
+- name: Configuration interface "NAT"
+  template:
+    src: ../templates/eth0.network
+    dest: /etc/systemd/network/
+  become: yes
+
+- name: Installation de systemd
+  yum: 
+    name: systemd-networkd
+    state: latest
+  become: yes
+
+- name: Démarrage de systemd-networkd
+  systemd:
+    name: systemd-networkd
+    state: started
+    enabled: yes
+  become: yes
+
+- name: Préparation de "systemd-timesyncd"
+  systemd:
+    name: chronyd
+    state: stopped
+    enabled: no
+  become: yes 
+
+- name: Choix de la fuseau horaire.
+  command: timedatectl set-timezone Europe/Paris
+  become: yes
+
+- name: Déploiement tu fichier de configuration "timesyncd.conf"
+  template:
+    src: ../templates/timesyncd.conf
+    dest: /etc/network/
+  become: yes 
+
+- name: Démarrage de ntp via "systemd-timesyncd"
+  command: timedatectl set-ntp 1
+  become: yes
+
+
+

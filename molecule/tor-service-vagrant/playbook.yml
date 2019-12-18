@@ -3,5 +3,3 @@
   hosts: all
   roles:
     - role: anon-test
-
-      

@@ -1,72 +1,55 @@
-# Anon-Circuit-Libre-Infra
+Role Name
+Role Name
+=========
 
-## Présentation
-Nom de l'équipe : **github..**
+A brief description of the role goes here.
 
-Membre de l'équipe : **Yannick**, **John**, **Elie**
+Requirements
+------------
 
-Théme : **Tor**, **VPN**, **Docker** 
+Any pre-requisites that may not be covered by Ansible itself or the role should
+be mentioned here. For instance, if the role uses the EC2 module, it may be a
+good idea to mention in this section that the boto package is required.
 
-## Contexte
+Role Variables
+--------------
 
-## Répartition du travail :
+Installation des configurations réseaux
 
-**Circuit tor & hidden service** -> John Marx
+- net 
 
-**Déploiement de VPN sur conteneur Docker** -> Yannick Courrian
+Provisionnement de paquet
 
-**Basculement d'VPN** -> Elie Benayoun
+- pi
 
-## Schéma: Circuit sécurisé pour attaque réseaux.
-![](https://i.imgur.com/0hEEMhP.png)
+Configuration du circuit
 
-## Exigence   
+- Circuit 
 
-### Machines :
+Dependencies
+------------
 
-- Client
-- Attaquant
+A list of other roles hosted on Galaxy should go here, plus any details in
+regards to parameters that may need to be set for other roles, or variables that
+are used from other roles.
 
-### Systèmes :
+Example Playbook
+----------------
 
-- tor service
-- vpn server
+Including an example of how to use your role (for instance, with variables
+passed in as parameters) is always nice for users too:
 
-### Actions :
+    - hosts: servers
+      roles:
+         - { role: anon-test, x: 42 }
 
-#### Création
-* déploiement de la machine client 
-  * OS : 
-  * IP : 192.168.59.101
-  * PAQUETS : torify, ssh
+License
+-------
 
-* déploiement de la machine tor service 
-  * OS : 
-  * IP : 192.168.69.102 
-  * PAQUETS : tor
- 
-* déploiement de la machine attaquant 
-  * OS :
-  * IP : 192.168.79.103
-  * PAQUETS: docker, wireguard-client, nmap, telnet hping, sqlmap etc ..  
+GPLv3
 
-* déploiement de conteneur docker
-  * OS :
-  * IP :192.168.79.104,105,106
-  * PAQUETS: wireguard-server
-  
-#### Cas d'usage
-* connexion ssh au service tor.
-  * ```torify ssh user@abcdefghijklmnop.onion```
-* connexion à ssh à la machine "attaquant".
-  * ```ssh user@192.168.79.103```
-* connexion au vpn server.
-  * ```sudo wg```
-  
-## Maintien en condition opérationnelles
+Author Information
+------------------
 
-## Sources :
-
-* https://medium.com/@tzhenghao/how-to-ssh-over-tor-onion-service-c6d06194147
-
-
+An optional section for the role authors to include contact information, or a
+website (HTML is not allowed).

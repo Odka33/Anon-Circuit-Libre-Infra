@@ -17,17 +17,6 @@ platforms:
       - auto_config: true
         network_name: private_network
         ip: 192.168.59.5
-        type: dhcp
-  - name: Tor
-    hostname: Tor
-    box: centos/7
-    memory: 1024
-    cpus: 1
-    interfaces:
-      - auto_config: true
-        network_name: private_network
-        ip: 192.168.69.10
-        type: dhcp
   - name: Attaquant
     hostname: Attaquant
     box: centos/7
@@ -37,11 +26,10 @@ platforms:
       - auto_config: true
         network_name: private_network
         ip: 192.168.79.15
-        type: dhcp
 provisioner:
   name: ansible
   options:
-    vvv: True
+    v: True
   lint:
     name: ansible-lint
 

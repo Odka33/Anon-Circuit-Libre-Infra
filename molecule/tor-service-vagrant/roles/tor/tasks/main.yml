@@ -1,0 +1,23 @@
+- name: Pre-install "tor"
+  yum: 
+    name: epel-release
+    state: latest
+  become: yes
+
+- name: Installation de "tor"
+  yum:
+    name: tor
+    state: latest
+  become: yes
+
+- name: Supprimer la conf par défaut
+  file:
+    path: /etc/tor/torrc
+    state: absent
+  become: yes 
+
+- name: Configuration de "tor"
+  template:
+    src: ../templates/torrc
+    dest: /etc/tor/
+  become: yes

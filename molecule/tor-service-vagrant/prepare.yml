@@ -1,5 +1,5 @@
 ---
-- name: Prepare
+- name: Prepare "Default"
   hosts: all
   gather_facts: false
   tasks:
@@ -8,17 +8,23 @@
       become: true
       changed_when: false
 
-- name: Prepare "Client" 
+- name: Prepare hosts
+  hosts: all
+  roles:
+    - common
+
+- name: Prepare Client
   hosts: Client
+  vars:
+    ip: 192.168.59.5
   roles:
-    - net-client
+    - net
 
-- name: Prepare "Tor"
-  hosts: Tor
-  roles:
-    - net-tor
-
-- name: Prepare "Attaquant"
+- name: Prepare Attaquant
   hosts: Attaquant
+  vars:
+    ip: 192.168.79.15
   roles:
-    - net-attaquant    
+    - net
+    - tor
+    

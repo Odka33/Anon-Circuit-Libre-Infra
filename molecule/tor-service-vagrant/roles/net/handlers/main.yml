@@ -1,0 +1,5 @@
+- name: Mise en fonctionnement de Eth1
+  systemd: 
+    name: systemd-networkd
+    state: restarted
+  become: yes
