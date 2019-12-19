@@ -1,4 +1,8 @@
 [Client]
-192.168.59.5
+Client
+[Client:vars]
+ip=192.168.59.5
 [Attaquant]
-192.168.79.15
+Attaquant
+[Attaquant:vars]
+ip=192.168.79.15

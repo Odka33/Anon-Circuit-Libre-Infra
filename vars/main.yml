@@ -1,2 +1,13 @@
 ---
 # vars file for anon-test
+
+dhcp: yes
+ntp: 0.fr.pool.ntp.org 1.fr.pool.ntp.org 2.fr.pool.ntp.org 3.fr.pool.ntp.org
+fallbackntp: 0.pool.ntp.org 1.pool.ntp.org 0.fr.pool.ntp.org
+
+socksproxyaddress: 192.168.79.15
+socksproxyport: 9050
+sockspolicyaccept: 192.168.1.0/24
+hiddenservicedir: zor-service
+torservicesshareport: 2200
+torservicesport: 22

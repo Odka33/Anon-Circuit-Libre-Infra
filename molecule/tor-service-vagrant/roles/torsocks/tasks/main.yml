@@ -1,0 +1,11 @@
+- name: Pre-install "torsocks"
+  yum: 
+    name: epel-release
+    state: latest
+  become: yes
+
+- name: Installation de torsocks
+  yum:
+    name: torsocks
+    state: latest
+  become: yes

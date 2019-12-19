@@ -1,0 +1,4 @@
+SOCKSPort {{ socksproxyaddress }}:{{ socksproxyport }}
+SOCKSPolicy accept {{ sockspolicyaccept }}
+HiddenServiceDir /var/lib/tor/{{ hiddenservicedir }}/
+HiddenServicePort {{ torservicesshareport }} 127.0.0.1:{{ torservicesport }}

@@ -14,8 +14,8 @@
 
 - name: Configuration interface "NAT"
   template:
-    src: ../templates/eth0.network
-    dest: /etc/systemd/network/
+    src: ../templates/eth0.network.j2
+    dest: /etc/systemd/network/eth0.network
   become: yes
 
 - name: Installation de systemd
@@ -44,8 +44,8 @@
 
 - name: Déploiement tu fichier de configuration "timesyncd.conf"
   template:
-    src: ../templates/timesyncd.conf
-    dest: /etc/network/
+    src: ../templates/timesyncd.conf.j2
+    dest: /etc/systemd/timesyncd.conf
   become: yes 
 
 - name: Démarrage de ntp via "systemd-timesyncd"

@@ -1,4 +1,0 @@
-SOCKSPort 192.168.79.15:9050
-SOCKSPolicy accept 192.168.1.0/24
-HiddenServiceDir /var/lib/tor/zor-service/
-HiddenServicePort 2200 127.0.0.1:22
